@@ -15,12 +15,21 @@
 }
 
 body {
-  background: var(--body-background) url(../assets/background.png) no-repeat;
-  background-size: cover;
+  background: var(--body-background);
   font-family: 'Montserrat', sans-serif;
   color: var(--text-color);
+  overflow-x: hidden;
+}
+
+header {
   width: 1200px;
   margin: auto;
+}
+
+div.page {
+  width: 100vw;
+  background: url(../assets/background.png) no-repeat;
+  background-size: cover;
 }
 
 a {
@@ -63,6 +72,11 @@ button:hover {
   transform: scale(0.98);
   filter: brightness(1.1);
   transition: .5s;
+}
+
+#topo, #galery {
+  width: 1200px;
+  margin: auto;
 }
 
 section#topo {
@@ -133,4 +147,68 @@ section#topo {
 #galery img {
   width: 100%;
   border: 1px solid white;
+}
+
+aside {
+  display: grid;
+  grid-template-areas: 
+  "number cit1 cit2"
+  "number banner banner"
+  "number banner banner"
+  ;
+}
+
+#numbers {
+  grid-area: number;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--subtitle-color);
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid var(--subtitle-color);
+  border-bottom: 1px solid var(--subtitle-color);
+  padding: 0px 60px;
+}
+
+#numbers span {
+  display: block;
+  font-size: 40px;
+  line-height: 61px;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+#numbers p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+#ref {
+  text-decoration: underline;
+  color: var(--color-logo);
+}
+
+#autor {
+  text-decoration: underline;
+}
+
+#cit1 {
+  grid-area: cit1;
+}
+
+#cit2 {
+  grid-area: cit2;
+}
+
+#cit1, #cit2 {
+  margin: 70px 60px;
+}
+
+#banner1 {
+  grid-area: banner;
 }
