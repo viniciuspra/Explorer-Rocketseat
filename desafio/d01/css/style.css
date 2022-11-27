@@ -149,7 +149,7 @@ section#topo {
   border: 1px solid white;
 }
 
-aside {
+aside#sobre {
   display: grid;
   grid-template-areas: 
   "number cit1 cit2"
@@ -211,4 +211,19 @@ aside {
 
 #banner1 {
   grid-area: banner;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 61px;
+  padding: 100px 0;
+}
+
+h2 span {
+  color: var(--color-logo);
+}
+
+aside#popular {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
