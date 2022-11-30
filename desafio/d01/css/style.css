@@ -21,10 +21,7 @@ body {
   overflow-x: hidden;
 }
 
-header {
-  width: 1200px;
-  margin: auto;
-}
+
 
 div.page {
   width: 100vw;
@@ -41,7 +38,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 57px 0px;
+  padding: 57px 80px;
 }
 
 ul {
@@ -75,8 +72,7 @@ button:hover {
 }
 
 #topo, #galery {
-  width: 1200px;
-  margin: auto;
+  margin: 0px 80px;
 }
 
 section#topo {
@@ -213,17 +209,26 @@ aside#sobre {
   grid-area: banner;
 }
 
-h2 {
+h2.titulo {
   font-size: 40px;
   line-height: 61px;
-  padding: 100px 0;
+  padding: 100px 0px 100px 80px;
+
 }
 
-h2 span {
+h2.titulo span {
   color: var(--color-logo);
 }
 
-aside#popular {
+aside.popular {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.border {
+  border-right: 1px solid var(--subtitle-color);
 }
