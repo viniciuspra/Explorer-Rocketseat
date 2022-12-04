@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crie seu evento</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>
+        Crie e compartilhe seu evento.
+      </h1>
+      <p>
+        O primeiro passo, é preencher esse formulário de inscrição.
+      </p>
+    </header>
+
+    <form>
+
+      <fieldset>
+        <legend>Informações do Evento</legend>
+
+        <div class="input-wrapper">
+          <label for="title-event">Título do evento <span>(mínimo 8 caracteres)</span></label>
+          <input type="text" id="title-event">
+        </div>
+        
+        <div class="input-wrapper">
+          <label for="event-link">Link do evento <span>(comece com https://)</span></label>
+          <input type="text" id="event-link">
+        </div>
+        
+        <div class="input-wrapper">
+          <label for="whats-number">Whatsapp para contato <span>(somente números)</span></label>
+          <input type="number" id="whats-number">
+        </div>
+        
+        <div class="input-wrapper">
+          <label for="info-extra">Informações  extras</label>
+          <textarea id="info-extra" cols="30" rows="10"></textarea>
+        </div>
+        
+        <div class="input-wrapper">
+          <label for="event-type">Categoria</label>
+          <select id="event-type" required>
+            <option value="" disabled selected hidden>Tipo do evento</option>
+            <option value="vazio2">Vazio</option>
+            <option value="vazio3">Vazio</option>
+            <option value="vazio4">Vazio</option>
+          </select>
+        </div>
+
+      </fieldset>
+
+    </form>
+  </div>
+</body>
+</html>
