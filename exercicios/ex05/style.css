@@ -194,12 +194,12 @@ select:invalid {
    margin-top: 8px;
 }
 
-.submit {
+footer {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  width: 736px;
+  width: 730px;
   height: 136px;
   margin: auto;
   background: #F0F0F4;
@@ -207,13 +207,15 @@ select:invalid {
 
   margin-bottom: 91px;
   
+  border-top: 1px solid #D6D6D6;
 }
 
-.submit input {
+footer button {
   width: 608px;
   height: 56px;
   
   background: #04D361;
+  border: none;
   border-radius: 8px;
 
   font-family: 'Archivo', sans-serif;
@@ -222,4 +224,14 @@ select:invalid {
   color: #FFFFFF;
 
   cursor: pointer;
+  transition: .5s all;
+}
+
+footer button:hover {
+  filter: brightness(1.05);
+  transform: scale(0.99);
+}
+
+footer button:active {
+  transform: scale(0.96);
 }
