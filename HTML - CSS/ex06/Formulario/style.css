@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #BFD7E4;
+}
+
+.page {
+  width: 750px;
+  margin: auto;
+}
+
+.page::before {
+  content: "";
+  width: 100%;
+  height: 465px;
+  background-color: #293241;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Staatliches', cursive;
+  font-size: 36px;
+  line-height: 45px;
+  color: white;
+
+  margin-top: 100px;
+}
+
+header p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+
+  margin-top: 10px;
+}
+
+header img {
+  margin-top: 25px;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #F67669;
+  width: 100%;
+  height: 125px;
+  margin-top: 30px;
+  border-radius: 20px 20px 0 0;
+
+  text-align: center;
+  font-family: 'Staatliches', cursive;
+  font-size: 24px;
+  line-height: 34px;
+  color: #FFFFFF;
+}
+form {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  padding: 30px 64px;
+  margin-bottom: 300px;
+  border-radius: 0 0 20px 20px;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset legend {
+  width: 100%;
+  font-family: 'Staatliches', cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  text-align: center;
+  color: #253B51;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #E6E6F0;
+}
+
+.input-wrapper input, select, textarea {
+  width: 100%;
+  height: 55px;
+
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+
+  margin-top: 8px;
+  padding: 0 24px;
+}
+
+.names {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.input-wrapper span {
+  font-size: 12px;
+  line-height: 20px;
+  color: #C1BCCC;
+
+  margin-left: 10px;
+}
+
+#personal-name {
+  margin-bottom: 31px;
+}
+
+select {
+  display: block;
+  width: 300px;
+}
+
+#info-mentor .input-wrapper {
+  margin-top: 30px;
+}
+
+textarea {
+  height: 165px;
+  padding-top: 20px;
+}
+
+.mentoring {
+  position: relative;
+
+  font-size: 14px;
+  line-height: 24px;
+  color: #4E4958;
+
+  height: 25px;
+  margin: 24px 0px 48px 0px;
+}
+
+.mentoring input {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.mentoring label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mentoring label::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: block;
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+}
+
+.mentoring input:focus + label::before {
+  outline: 2px solid black;
+}
+
+.mentoring input:checked + label::before{
+  background: url(assets/check.svg) no-repeat;
+  background-position: center center;
+}
+
+.dates {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+#date {
+  width: 300px;
+}
+
+button {
+  width: 100%;
+  height: 51px;
+  background: #F67669;
+  border: none;
+  border-radius: 8px;
+
+  margin-top: 60px;
+  
+  font-family: 'Staatliches', cursive;
+  font-size: 20px;
+  line-height: 26px;
+  color: #FFFFFF;
+
+  cursor: pointer;
+
+  transition: .5s all;
+}
+
+button:hover {
+  filter: brightness(1.06);
+  transform: scale(1.02);
+}
+
+button:active {
+  transform: scale(0.97);
+}
