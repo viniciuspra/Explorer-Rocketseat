@@ -79,3 +79,29 @@ li span {
 #space {
   margin-right: 10px;
 }
+
+@media screen and (min-width: 700px) {
+  main {
+    max-width: 64.3rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 7.1rem;
+  }
+
+  main div {
+    width: 29.5rem;
+  }
+
+  li {
+    max-width: 25rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  #space {
+    width: 2.8rem;
+    margin: 0;
+  }
+}
