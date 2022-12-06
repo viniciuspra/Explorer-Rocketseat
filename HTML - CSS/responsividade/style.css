@@ -81,6 +81,10 @@ li span {
 }
 
 @media screen and (min-width: 700px) {
+  body {
+    padding: 3.5rem 7rem;
+  }
+
   main {
     max-width: 64.3rem;
     margin: auto;
