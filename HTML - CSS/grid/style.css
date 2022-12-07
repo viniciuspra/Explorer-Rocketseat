@@ -20,6 +20,10 @@ img {
   height: auto;
 }
 
+header {
+  animation: topdown .7s;
+}
+
 header p {
   line-height: 2rem;
   text-align: center;
@@ -44,8 +48,13 @@ main {
   gap: 32px;
 }
 
+main:last-child {
+  margin-bottom: 100px;
+}
+
 .card {
   position: relative;
+  animation: downtop .7s .4s backwards;
 }
 
 .card img {
@@ -83,5 +92,32 @@ main {
   padding: 0 10px;
 
   width: fit-content;
+}
 
+.desktop {
+  display: none;
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-45px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
