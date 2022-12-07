@@ -121,3 +121,46 @@ main:last-child {
     transform: translateY(0);
   }
 }
+
+@media (min-width: 700px) {
+  .page {
+    max-width: 73.1rem;
+    padding: 0 100px;
+  }
+
+  main {
+    display: grid;
+    grid-template-areas: 
+    "a b b"
+    "c c d"
+    ;
+  }
+
+   main div:nth-child(1) {
+    grid-area: a;
+   }
+
+   main div:nth-child(2) {
+    grid-area: b;
+   }
+
+   main div:nth-child(3) {
+    grid-area: c;
+   }
+
+   main div:nth-child(4) {
+    grid-area: d;
+   }
+
+  img {
+    width: 100%;
+  }
+
+  .desktop {
+    display: flex;
+  }
+
+  header h1 {
+    font-size: 3.5rem;
+  }
+}
