@@ -122,11 +122,7 @@ main:last-child {
   }
 }
 
-@media (min-width: 860px) {
-  .page {
-    max-width: 73.1rem;
-    padding: 0 100px;
-  }
+@media (min-width: 930px) {
 
   main {
     display: grid;
@@ -134,6 +130,19 @@ main:last-child {
     "a b b"
     "c c d"
     ;
+  }
+
+  .page {
+    max-width: 73.1rem;
+    padding: 0 100px;
+  }
+
+  .desktop {
+    display: flex;
+  }
+
+  header h1 {
+    font-size: 3.5rem;
   }
 
    main div:nth-child(1) {
@@ -151,16 +160,4 @@ main:last-child {
    main div:nth-child(4) {
     grid-area: d;
    }
-
-  img {
-    width: 100%;
-  }
-
-  .desktop {
-    display: flex;
-  }
-
-  header h1 {
-    font-size: 3.5rem;
-  }
 }
