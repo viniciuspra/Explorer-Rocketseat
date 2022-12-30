@@ -1,3 +1,6 @@
-let name = prompt("qual seu nome?")
+//  Perguntar Nome
 
-alert('Olá ' + name + '!')
+let nome = prompt("qual seu nome?")
+alert('Olá ' + nome + '!')
+
+
