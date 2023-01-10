@@ -1,7 +1,9 @@
 
-  let itens = [];
+let items = [];
 
-for (var i = 1; i < 10; i++) {
-  let item = prompt(`Digite o item ${i}:`);
-  let itens[i] = item;
+for (let i = 0; i < 10; i++) {
+  let item = prompt("Digite o item " + (i + 1));
+  items[i] = item
 }
+
+alert(items);
