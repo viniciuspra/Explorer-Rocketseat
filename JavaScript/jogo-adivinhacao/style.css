@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(287.56deg, #C2E9FB 0%, #A1C4FD 100%);
+  font-family: 'DM Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+h2, input, button {
+  font-family: 'DM Sans', sans-serif;
+}
+
+div.hide {
+  display: none;
+}
+
+.screen1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 428px;
+  height: 273px;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 48px 64px 64px;
+}
+
+/* screen1 */
+
+h1 { 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #34355B;
+  text-align: center;
+  height: 40px;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: rgba(52, 53, 91, 0.8);
+  margin-bottom: 48px;
+}
+
+
+input  {
+  border: none;
+  width: 50px;
+  height: 53px;
+  background: #DCE2E9;
+  border-radius: 4px 0px 0px 4px;
+  font-size: 16px;
+  line-height: 21px;
+  padding: 16px;
+  color: #34355B;
+  align-items: center;
+  outline: none;
+}
+
+.screen1 button {
+  border: none;
+  width: 83px;
+  height: 53px;
+  background: #7879F1;
+  border-radius: 0px 4px 4px 0px;
+  padding: 16px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-left: -10px;
+  cursor: pointer;
+  
+}
+
+button:hover {
+  transform: scale(0.98);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+/* screen2 */
+
+.screen2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.screen2 h2 {
+  font-size: 24px;
+  line-height: 150%;
+  text-align: center;
+  color: #34355B;
+}
+
+.screen2 button {
+  border: none;
+  width: 166px;
+  height: 53px;
+  background: #7879F1;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: #FFFFFF;
+  cursor: pointer;
+}
