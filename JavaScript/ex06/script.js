@@ -11,7 +11,7 @@
   alert("Parabéns! Você adivinhou na 1 tentativa")
  }
   while (result != random) {
-      result = prompt("Err0r, Tente Novamente")
+      result = prompt("Errou, Tente Novamente")
       tentativas++;
     if (result == random) { 
       alert(`Parabéns! Você adivinhou o número em ${tentativas} tentativas` )
