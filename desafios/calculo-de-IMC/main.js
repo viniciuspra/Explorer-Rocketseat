@@ -1,17 +1,9 @@
+import { Modal } from './modal.js'
+
 // Form
 const form = document.querySelector('form');
 const inputWeight = document.querySelector('#weight');
 const inputHeight = document.querySelector('#height');
-// modal
-const Modal = {
-  Wrapper: document.querySelector('.modal-wrapper'),
-  Message: document.querySelector('.modal .title span'),
-  BtnClose: document.querySelector('.close'),
-  
-  open() {
-    Modal.Wrapper.classList.add("open")
-  }
-}
 
 form.onsubmit = (e) => {
   e.preventDefault();
@@ -29,8 +21,5 @@ function IMC(weight, height) {
   return (weight / ((height / 100) ** 2)).toFixed(2)
 }
 
-Modal.BtnClose.onclick = reload
 
-function reload(e) {
-  window.location.reload()
-}
+
