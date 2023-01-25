@@ -6,6 +6,20 @@ export const Modal = {
   open() {
     Modal.Wrapper.classList.add("open")
   },
+
+  close() {
+    Modal.Wrapper.classList.remove("open")
+  },
 }
 
-Modal.BtnClose.onclick = (e) => window.location.reload()
+Modal.BtnClose.addEventListener("click", closeModal)
+
+function closeModal(event){
+  window.location.reload()
+}
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeModal()
+  }
+})
