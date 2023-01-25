@@ -6,10 +6,6 @@ export const Modal = {
   open() {
     Modal.Wrapper.classList.add("open")
   },
-
-  close() {
-    Modal.Wrapper.classList.remove("open")
-  },
 }
 
 Modal.BtnClose.addEventListener("click", closeModal)
