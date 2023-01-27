@@ -30,5 +30,5 @@ function DisplayResultMessage(result) {
   Modal.open()
 }
 
-
-
+weight.onkeypress = () => AletError.close()
+height.onkeypress = () => AletError.close()
