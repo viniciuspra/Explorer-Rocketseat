@@ -18,7 +18,6 @@ body {
 main {
   align-self: flex-end;
   justify-self: center;
-  gap: clamp(1rem, 1rem + 1vw, 3.4rem);
 }
 
 h1 {
@@ -27,6 +26,7 @@ h1 {
   font-size: clamp(4.4rem, 5rem + 6vw, 8.8rem);
   line-height: 10.3rem;
   text-transform: uppercase;
+  margin-bottom: clamp(1rem, 1rem + 1vw, 3.4rem);
 }
 
 .controls {
@@ -58,7 +58,7 @@ button:hover {
 footer {
   align-self: end;
   justify-self: end;
-  margin: .5rem;
+  padding: clamp(.5rem, .5rem + 1vw, 1.5rem);
   cursor: pointer;
 }
 
