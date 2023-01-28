@@ -20,13 +20,13 @@ body {
 main {
   display: flex; 
   flex-direction: column;
-  gap: 3.4rem;  
+  gap: clamp(1rem, 1rem + 1vw, 3.4rem);
 }
 
 h1 {
   color: white;
   font-weight: 700;
-  font-size: 8.8rem;
+  font-size: clamp(4.4rem, 5rem + 6vw, 8.8rem);
   line-height: 10.3rem;
   text-align: center;
   text-transform: uppercase;
@@ -38,10 +38,14 @@ h1 {
   align-items: center;
   gap: 3.2rem;
   padding: 22px 40px;
-  width: 22.8rem;
-  height: 10rem;
+  width: clamp(12rem, 12rem + 15vw, 22.8rem);
+  height: clamp(4rem, 7rem + 3vw, 10.8rem);
   background: rgba(66, 211, 255, 0.13);
   border-radius: 10rem;
+}
+
+img {
+  width: clamp(4rem, 3rem + 5vw, 6.4rem);
 }
 
 button {
@@ -54,10 +58,10 @@ button:hover {
   transform: scale(0.97);
 }
 
-.volume {
+footer {
   position: absolute;
-  right: 4rem;
-  bottom: 3.2rem;
+  right: 2.5rem;
+  bottom: 1.5rem;
   cursor: pointer;
 }
 
