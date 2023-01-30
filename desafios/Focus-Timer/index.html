@@ -9,16 +9,27 @@
 </head>
 <body>
   <main>
-    <h1><span class="minute">00</span>:00</h1>
+    <h1><span class="minutes">00</span>:<span class="seconds">00</span></h1>
     <div class="controls">
       <button class="play">
         <img src="assets/play-circle.svg" alt="botao play">
       </button>
-      <button class="stop">
+      <button class="pause hide">
+        <img src="assets/pause-circle.svg" alt="">
+      </button>
+      <button class="stop hide">
+        <img src="assets/stop-circle.svg" alt="">
+      </button>
+      <button class="set">
         <img src="assets/stopwatch.svg" alt="">
       </button>
     </div>
   </main>
-    <footer><img class="volume" src="assets/volume-medium.svg" alt=""></footer>
+    <footer>
+      <img class="volume" src="assets/volume-medium.svg" alt="">
+      <img class="mute hide" src="assets/volume-mute.svg" alt="">
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>

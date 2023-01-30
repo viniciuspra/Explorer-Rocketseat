@@ -41,6 +41,10 @@ h1 {
   border-radius: 10rem;
 }
 
+.hide {
+  display: none;
+}
+
 img {
   width: clamp(4rem, 3rem + 5vw, 6.4rem);
 }
