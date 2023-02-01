@@ -12,53 +12,61 @@ function countdown() {
     setTimeout(() => {
       let seconds = Number(secondsDisplay.textContent)
       let minutes = Number(minutesDisplay.textContent)
-
-      console.log(seconds)
-      if (seconds <= 0) {
-        seconds = 3
-
-        minutesDisplay.textContent = minutes - 1
+  
+      secondsDisplay.textContent = "00"
+      
+      if (minutes <= 0) {
+        SwitchButtonsControls.SwitchStop()
+        return
       }
       
-      secondsDisplay.textContent = String(seconds - 1).padStart(2, '0')
+      if (seconds <= 0) {
+        seconds = 2
+
+        minutesDisplay.textContent = String(minutes - 1).padStart(2, '0')
+      }
+
+      secondsDisplay.textContent = String(seconds - 1).padStart(2, '0').padStart(2, "0")
+      
       countdown()
     }, 1000)
 }
 
-function playPause(e) {
-  pauseButton.classList.toggle("hide")
-  playButton.classList.toggle("hide")
-  stopButton.classList.remove("hide")
-  setButton.classList.add("hide")
-
-  countdown()
-}
-function toggleVolume(e) {
-  volumeButton.classList.toggle("hide")
-  muteButton.classList.toggle("hide")
+const SwitchButtonsControls = {
+  SwitchPlay: function playPause(e) {
+    pauseButton.classList.toggle("hide")
+    playButton.classList.toggle("hide")
+    stopButton.classList.remove("hide")
+    setButton.classList.add("hide")
+    countdown()
+  },
+  SwitchPause: function PausePlay() {
+    pauseButton.classList.toggle("hide")
+    playButton.classList.toggle("hide")
+  },
+  SwitchStop: function StopSet() {
+    playButton.classList.remove("hide")
+    pauseButton.classList.add("hide")
+    setButton.classList.remove("hide")
+    stopButton.classList.add("hide")
+  },
 }
 function timeFunction() {
   minutes = Number(prompt("Quantos minutos: \n"))
   if (minutes > 60 || minutes == '' || minutes == 0) {
     alert("Digite um Numero entre 1 e 60")
-  }else if(minutes < 10){
-    minutesDisplay.textContent = '0' + minutes
-  } else {
-    minutesDisplay.textContent = minutes
+  }else {
+    minutesDisplay.textContent = String(minutes).padStart(2, '0')
   }
 }
+function toggleVolume(e) {
+  volumeButton.classList.toggle("hide")
+  muteButton.classList.toggle("hide")
+}
 
-playButton.addEventListener('click', playPause);
-pauseButton.addEventListener('click', (e) => { 
-    pauseButton.classList.toggle("hide")
-    playButton.classList.toggle("hide")
-});
+playButton.addEventListener("click", SwitchButtonsControls.SwitchPlay)
+pauseButton.addEventListener("click", SwitchButtonsControls.SwitchPause)
 setButton.addEventListener('click', timeFunction);
-stopButton.addEventListener('click', (e) => {
-    playButton.classList.remove("hide")
-    pauseButton.classList.add("hide")
-    setButton.classList.remove("hide") 
-    stopButton.classList.add("hide") 
-});
+stopButton.addEventListener('click', SwitchButtonsControls.SwitchStop);
 volumeButton.addEventListener('click', toggleVolume)
 muteButton.addEventListener('click', toggleVolume)
