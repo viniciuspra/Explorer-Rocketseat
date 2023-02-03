@@ -1,4 +1,4 @@
-function UpdateTimerDisplay(minutesDisplay, minutes, secondsDisplay, seconds) {
+function UpdateTimerDisplay(minutes, seconds) {
   minutesDisplay.textContent = String(minutes).padStart(2, "0")
   secondsDisplay.textContent = String(seconds).padStart(2, "0")
 }
@@ -6,7 +6,7 @@ function ResetTimer() {
   UpdateTimerDisplay(minutes, 0)
   clearTimeout(TimerTimeOut)
 }
-function countdown(secondsDisplay, minutesDisplay, SwitchStop, TimerTimeOut) {
+function countdown() {
   TimerTimeOut = setTimeout(() => {
     let seconds = Number(secondsDisplay.textContent)
     let minutes = Number(minutesDisplay.textContent)
@@ -25,8 +25,8 @@ function countdown(secondsDisplay, minutesDisplay, SwitchStop, TimerTimeOut) {
 
     UpdateTimerDisplay(minutes, String(seconds - 1))
 
-    countdown(secondsDisplay, minutesDisplay, SwitchStop)
+    countdown()
   }, 1000)
 }
 
-export {ResetTimer, countdown}
+export {}
