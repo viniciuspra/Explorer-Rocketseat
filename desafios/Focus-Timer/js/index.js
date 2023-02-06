@@ -1,36 +1,63 @@
-import { ResetControls, ResetPlay, SwitchStop} from "./controls.js"
-import {ResetTimer, countdown } from "./timer.js"
+import Controls from "./controls.js"
+import Timer  from "./timer.js"
+import {
+  buttonPlay,
+  buttonPause,
+  buttonStop,
+  buttonSet,
+  buttonSoundOn,
+  buttonSoundOff,
+  minutesDisplay,
+  secondsDisplay,
+} from "./elements.js"
 
-const playButton = document.querySelector('.play');
-const pauseButton = document.querySelector('.pause');
-const stopButton = document.querySelector('.stop');
-const setButton = document.querySelector('.set');
-const volumeButton = document.querySelector('.volume');
-const muteButton = document.querySelector('.mute');
-const minutesDisplay = document.querySelector('.minutes');
-const secondsDisplay = document.querySelector('.seconds');
-let minutes = Number(minutesDisplay.textContent)
-let TimerTimeOut
+const {} = elements
 
-playButton.addEventListener("click", () => {
-  ResetControls(pauseButton, playButton, stopButton, setButton)
-  countdown(secondsDisplay, minutesDisplay, SwitchStop, TimerTimeOut)
+const controls = Controls({
+  buttonPlay,
+  buttonPause,
+  buttonStop,
+  buttonSet
 })
-pauseButton.addEventListener("click", () => {
-  ResetPlay(pauseButton, playButton)
-  clearTimeout(TimerTimeOut)
+
+const timer = Timer({
+  minutesDisplay,
+  secondsDisplay,
+  resetControls: controls.reset
 })
-setButton.addEventListener('click', () => {
-  minutes = Number(prompt("Quantos minutos: \n"))
-  if (!minutes || minutes >= 100) {
-    ResetControls(pauseButton, playButton, stopButton, setButton)
-  } else {
-    UpdateTimerDisplay(minutes, 0)
+
+buttonPlay.addEventListener("click", function () {
+  controls.play()
+  timer.countdown()
+})
+
+buttonPause.addEventListener("click", function () {
+  controls.pause()
+  timer.hold()
+})
+
+buttonStop.addEventListener("click", function () {
+  controls.reset()
+  timer.reset()
+})
+
+buttonSoundOff.addEventListener("click", function () {
+  buttonSoundOn.classList.remove("hide")
+  buttonSoundOff.classList.add("hide")
+})
+
+buttonSoundOn.addEventListener("click", function () {
+  buttonSoundOn.classList.add("hide")
+  buttonSoundOff.classList.remove("hide")
+})
+
+buttonSet.addEventListener("click", function () {
+  let newMinutes = controls.getMinutes()
+
+  if (!newMinutes) {
+    timer.reset()
+    return
   }
-});
-stopButton.addEventListener('click', () => {
-  SwitchStop(pauseButton, playButton, stopButton, setButton)
-  ResetTimer()
-});
-
-
+  timer.updateDisplay(newMinutes, 0)
+  timer.updateMinutes(newMinutes)
+})
