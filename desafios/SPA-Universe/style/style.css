@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: url(/desafios/SPA-Universe/assets/mountains-universe-1.jpg) no-repeat bottom center;
+  background-size: cover;
+}
+
+header {
+  margin: 40px 72px;
+  position: absolute;
+}
+
+header, ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+li, a {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 22px;
+  color: #C4C4CC;
+  list-style: none;
+}
+
+a::selection {
+  color: red;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 125%;
+  color: #E1E1E6;
+}
+
+button {
+  width: 195px;
+  height: 48px;
+  color: white;
+  font-weight: bold;
+  background-color: transparent;
+  border: 2px solid #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) .3s;
+}
+
+button:hover {
+  background-color: white;
+  color: #02799D;
+}
+
+button:active {
+  transform: scale(0.98);
+}
