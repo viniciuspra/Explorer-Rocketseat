@@ -71,3 +71,18 @@ button:hover {
 button:active {
   transform: scale(0.98);
 }
+
+#base {
+  display: grid;
+  align-content: center;
+  justify-content: start;
+  margin-left: 102px;
+}
+
+p {
+  width: 648px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  color: #E1E1E6;
+}
