@@ -14,17 +14,16 @@
     <img src="./assets/uni-logo.svg" alt="">
     <nav>
       <ul>
-        <li><a href="/desafios/SPA-Universe/home.html">Home</a></li>
-        <li><a href="/desafios/SPA-Universe/universe.html">O Universo</a></li>
-        <li><a href="/desafios/SPA-Universe/exploration.html">Exploração</a></li>
+        <li><a id="home" href="/desafios/SPA-Universe/index.html" onclick="route()">Home</a></li>
+        <li><a id="universe" href="/universe" onclick="route()">O Universo</a></li>
+        <li><a id="explore" href="/exploration" onclick="route()">Exploração</a></li>
+        <li><a href="/404" onclick="route()"></a></li>
       </ul>
     </nav>
   </header>
-  
-      <main>
-        <h1 id="mid">Explore o universo</h1>
-        <button>QUERO SABER MAIS</button>
-      </main>
 
+      <div id="app"></div>
+
+      <script src="src/index.js" type="module"></script>
 </body>
 </html>

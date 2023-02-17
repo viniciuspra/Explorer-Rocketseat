@@ -30,8 +30,9 @@ li, a {
   list-style: none;
 }
 
-a::selection {
-  color: red;
+.select {
+  color: white;
+  font-weight: bold;
 }
 
 main {
