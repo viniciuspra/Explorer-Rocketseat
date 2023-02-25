@@ -1,16 +1,4 @@
-export class GithubUser {
-  static async search(username) {
-    const endpoint = `https://api.github.com/users/${username}`
-    const data = await fetch(endpoint)
-    const { login, name, public_repos, followers } = await data.json()
-    return ({
-      login,
-      name,
-      public_repos,
-      followers,
-    })
-  }
-}
+import { GithubUser } from "./GithubUser.js"
 
 export class Favorites {
   constructor(root) {
@@ -22,21 +10,38 @@ export class Favorites {
     this.entries = JSON.parse(localStorage.getItem("@github-favorites:")) || []
   }
 
+  save() {
+    localStorage.setItem("@github-favorites:", JSON.stringify(this.entries))
+  }
+
   async add(username) {
     try {
+      const userExists = this.entries.find(entry => entry.login === username)
+      if(userExists) {
+        throw new Error(`User ${username} already exists`)
+        return
+      }
+      
       const user = await GithubUser.search(username)
-      console.log(user);
-      if (user.login === undefined) {
+      
+      if (user.login === undefined || user.name === null) {
         throw new Error(`User not found!`)
       }
-    } catch (error) {
-      alert(error.message)
+
+      this.entries = [user, ...this.entries]
+      this.update()
+      this.save()
+
+    } catch (err) {
+      alert(err.message)
     }
+    
   }
 
   delete(user) {
     this.entries = this.entries.filter((entry) => entry.login !== user.login)
     this.update()
+    this.save()
   }
 }
 
@@ -51,10 +56,21 @@ export class FavoritesView extends Favorites {
 
   onadd() {
     const addButton = this.root.querySelector('.search button')
-    addButton.onclick = () => {
-      const { value } = this.root.querySelector('.search input')
+    const input = this.root.querySelector('.search input')
+
+    const addFavorite = () => {
+      const { value } = input
       this.add(value)
+      input.value = ""
+      input.focus()
     }
+
+    addButton.onclick = addFavorite
+    input.addEventListener('keydown', event => {
+      if (event.key === 'Enter') {
+        addFavorite()
+      } 
+    })
   }
 
   update() {
