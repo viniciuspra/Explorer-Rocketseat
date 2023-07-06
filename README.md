@@ -10,7 +10,7 @@ A [Rocketseat](https://www.rocketseat.com.br/) é uma empresa que oferece cursos
 
 Aqui estão alguns dos projetos que desenvolvi durante meus estudos na [Rocketseat](https://www.rocketseat.com.br/):
 - [GitFav](https://github.com/viniciuspra/GitFav)
-- [FilmFanatic](https://github.com/viniciuspra/FilmFanatic)
+- [Focus Timer 2.0](https://github.com/viniciuspra/Focus-Timer2.0)
 - [RocketNotes](https://github.com/viniciuspra/RocketNotes) 
 
 Espero que esse repositório possa inspirar outros estudantes de programação a perseguir seus objetivos e aprender cada vez mais. Obrigado pela visita! :hugs:
