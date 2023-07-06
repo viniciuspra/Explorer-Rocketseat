@@ -9,8 +9,8 @@ A [Rocketseat](https://www.rocketseat.com.br/) é uma empresa que oferece cursos
 ## Projetos Desenvolvidos
 
 Aqui estão alguns dos projetos que desenvolvi durante meus estudos na [Rocketseat](https://www.rocketseat.com.br/):
-- Projeto [em contrução]
-- Projeto [em contrução]
-- Projeto [em contrução]
+- [GitFav](https://github.com/viniciuspra/GitFav)
+- [FilmFanatic](https://github.com/viniciuspra/FilmFanatic)
+- [RocketNotes](https://github.com/viniciuspra/RocketNotes) 
 
 Espero que esse repositório possa inspirar outros estudantes de programação a perseguir seus objetivos e aprender cada vez mais. Obrigado pela visita! :hugs:
